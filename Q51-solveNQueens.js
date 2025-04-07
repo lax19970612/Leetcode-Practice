@@ -44,9 +44,6 @@ var solveNQueens = function(n) {
           if (newCurrQueensPos.length === n) {
               ans.push(transferToPuzzle(newCurrQueensPos));
           } else {
-              // if is already last row, directly return(not found)
-              if (targetPos[0] === n - 1) return;
-
               // directly find next row
               for (let i = 0; i < n; i++) {
                   finder(newCurrQueensPos, [targetPos[0] + 1, i]);
